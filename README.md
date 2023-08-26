@@ -39,6 +39,9 @@ MIT License
 #### Saturday, 08/26
 * 1:30 Create ReadMe
 * 1:45 Add files to start project.
+* 2:30 Delete and restart project files because I didnt like the layout or use of technology.
+* 3:20 Create and connect MySQL.
+*3:50 Broke repository, might have to make new one:(
 
 Copyright (c) [2023] [Brandon Spear]
 
