@@ -30,6 +30,16 @@ Capstone Project for Epicodus
 ### License
 MIT License
 
+### Research & Planning Log
+#### Friday, 08/25
+* 6:33 Create repository
+* 7:30 Add proposal
+* 7:45 Research possible layouts for website
+* 8:20 Review lessons that will be used in project (i.e databases, account creation)
+#### Saturday, 08/26
+* 1:30 Create ReadMe
+* 1:45 Add files to start project.
+
 Copyright (c) [2023] [Brandon Spear]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

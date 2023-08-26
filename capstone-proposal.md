@@ -7,8 +7,8 @@ MVP
 1. User Authentication.              
 2. Parent and child profiles parents will have 4  digit password.                                                   
 3. For mvp purposes, up to two child profiles.     
-4. Parents can make and assign chores with reward money.                                                             
-5. Kids and parents can see their respective money pools.  
+4. Parents can make and assign chores.
+5. Child(ren) can mark chores as complete. 
 
 Technology Used
 ASP.NET, React, MySQL, 
@@ -19,3 +19,5 @@ Stretch Goals
 3. Email verification upon account creation.     
 4. Email notification when parent account signed into.                                                             
 5. Detailed history of completed/late chores, and their details.
+5. Reward money for completed chores.
+6. See pools of reward money.
