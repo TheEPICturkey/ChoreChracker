@@ -42,7 +42,13 @@ MIT License
 * 1:45 Add files to start project.
 * 2:30 Delete and restart project files because I didnt like the layout or use of technology.
 * 3:20 Create and connect MySQL.
-*3:50 Broke repository, might have to make new one:(
+* 3:50 Broke repository, might have to make new one:(
+#### Sunday, 08/27
+* 10:15 Squashed a 🐜, and created some more 🐜.
+* 12:00 Sqaushed some more server 🐜.
+* 2:50 Sqaushed all current 🐜. Server up and running properly.
+* 
+* 
 
 Copyright (c) [2023] [Brandon Spear]
 
