@@ -30,19 +30,35 @@ app.post('/createUser', (req, res) => {
     });
 });
 
+// app.post('/assignChore', (req, res) => {
+//     console.log('Assign Chore endpoint hit!');
+//     const { title, description, assignedTo, createdBy } = req.body;
+
+//     const query = 'INSERT INTO Chores (title, description, assignedTo, createdBy) VALUES (?, ?, ?, ?)';
+
+//     db.query(query, [title, description, assignedTo, createdBy], (err, result) => {
+//         if (err) {
+//             console.error('Database error:', err);
+//             return res.status(500).send({ error: 'Database operation failed' });
+//         }
+//         res.send(result);
+//     });
+// });
+
 app.post('/assignChore', (req, res) => {
-    console.log('Assign Chore endpoint hit!');
+    console.log('Payload received:', req.body);
     const { title, description, assignedTo, createdBy } = req.body;
 
+    // Validate createdBy field
+    if (typeof createdBy !== 'number' || !createdBy) {
+        return res.status(400).json({ error: "createdBy field is required and must be a number" });
+    }
+
     const query = 'INSERT INTO Chores (title, description, assignedTo, createdBy) VALUES (?, ?, ?, ?)';
-    // db.query(query, [title, description, assignedTo, createdBy], (err, result) => {
-    //     if (err) throw err;
-    //     res.send(result);
-    // });
     db.query(query, [title, description, assignedTo, createdBy], (err, result) => {
         if (err) {
             console.error('Database error:', err);
-            return res.status(500).send({ error: 'Database operation failed' });
+            return res.status(500).send({ error: `Database operation failed: ${err.message}` });
         }
         res.send(result);
     });
