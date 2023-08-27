@@ -11,7 +11,7 @@ Capstone Project for Epicodus
   * axios
 
 ### Description
-* ChoreTracker is a web application designed to assit parents in assigning and monitoring chores for their childeren, while also offering incentives. Application will have creation of parent account, parent and child profiles within, and chore creation, assignment, and viewing. This will promote responsibility, and orginization.
+* ChoreTracker is a web application designed to assist parents in assigning and monitoring chores for their childeren, while also offering incentives. Application will have creation of parent account, parent and child profiles within, and chore creation, assignment, and viewing. This will promote responsibility, and orginization.
 
 ### Application Instructions
 * NOTE: You will need a code editor to view or edit the code. My favorite, and recommended one is Visual Studio Code.
