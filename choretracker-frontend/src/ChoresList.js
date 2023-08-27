@@ -5,7 +5,7 @@ function ChoresList() {
     const [chores, setChores] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5001/chores')
+        axios.get('http://localhost:5000/chores')
             .then(response => {
                 setChores(response.data);
             })

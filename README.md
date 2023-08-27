@@ -8,6 +8,7 @@ Capstone Project for Epicodus
   * ASP
   * React
   * MySQL
+  * axios
 
 ### Description
 * ChoreTracker is a web application designed to assit parents in assigning and monitoring chores for their childeren, while also offering incentives. Application will have creation of parent account, parent and child profiles within, and chore creation, assignment, and viewing. This will promote responsibility, and orginization.

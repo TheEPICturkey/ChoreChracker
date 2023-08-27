@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const cors = require('cors');
 
 const app = express();
-const PORT = 5001;
+const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -31,11 +31,19 @@ app.post('/createUser', (req, res) => {
 });
 
 app.post('/assignChore', (req, res) => {
+    console.log('Assign Chore endpoint hit!');
     const { title, description, assignedTo, createdBy } = req.body;
 
     const query = 'INSERT INTO Chores (title, description, assignedTo, createdBy) VALUES (?, ?, ?, ?)';
+    // db.query(query, [title, description, assignedTo, createdBy], (err, result) => {
+    //     if (err) throw err;
+    //     res.send(result);
+    // });
     db.query(query, [title, description, assignedTo, createdBy], (err, result) => {
-        if (err) throw err;
+        if (err) {
+            console.error('Database error:', err);
+            return res.status(500).send({ error: 'Database operation failed' });
+        }
         res.send(result);
     });
 });
