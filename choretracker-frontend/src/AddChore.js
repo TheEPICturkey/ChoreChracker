@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function AddChore() {
+function AddChore({ onChoreAdded }) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
 
@@ -10,28 +10,27 @@ function AddChore() {
         const chore = {
             title,
             description,
-            assignedTo: 1,  
-            createdBy: 2  
+            assignedTo: 1, 
+            createdBy: 2
         };
 
         console.log('Sending chore data:', chore);
+
         axios.post('http://localhost:5000/assignChore', chore)
             .then(() => {
                 alert('Chore added successfully!');
                 setTitle('');
                 setDescription('');
+                onChoreAdded();  
             })
             .catch(error => {
                 if (error.response) {
-                    // The request was made, and the server responded with a status code outside the range of 2xx
                     console.error('Error response:', error.response.data);
                     console.error('Error response status:', error.response.status);
                     console.error('Error response headers:', error.response.headers);
                 } else if (error.request) {
-                    // The request was made, but no response was received
                     console.error('Error request:', error.request);
                 } else {
-                    // Something else happened while setting up the request
                     console.error('Error message:', error.message);
                 }
                 console.error('Error config:', error.config);
@@ -58,7 +57,7 @@ function AddChore() {
                         required
                     />
                 </label>
-                <button type="submit" onClick={() => console.log('Button clicked')}>Add Chore</button>
+                <button type="submit">Add Chore</button>
             </form>
         </div>
     );

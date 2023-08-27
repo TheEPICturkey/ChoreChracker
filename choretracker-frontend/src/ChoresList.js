@@ -4,7 +4,7 @@ import axios from 'axios';
 function ChoresList() {
     const [chores, setChores] = useState([]);
 
-    useEffect(() => {
+    const fetchChores = () => {
         axios.get('http://localhost:5000/chores')
             .then(response => {
                 setChores(response.data);
@@ -12,7 +12,9 @@ function ChoresList() {
             .catch(error => {
                 console.error("Error fetching chores:", error);
             });
-    }, []);
+    };
+
+    useEffect(fetchChores, []);
 
     return (
         <div>
