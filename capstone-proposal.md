@@ -7,7 +7,7 @@ MVP
 1. User Authentication.              
 2. Parent and child profiles parents will have 4  digit password.                                                   
 3. For mvp purposes, up to two child profiles.     
-4. Parents can make and assign chores.
+4. Parents can make, edit, and assign chores.
 5. Child(ren) can mark chores as complete. 
 
 Technology Used
@@ -21,3 +21,7 @@ Stretch Goals
 5. Detailed history of completed/late chores, and their details.
 5. Reward money for completed chores.
 6. See pools of reward money.
+
+
+
+state, nosql, google firebase
