@@ -47,8 +47,11 @@ MIT License
 * 10:15 Squashed a 🐜, and created some more 🐜.
 * 12:00 Sqaushed some more server 🐜.
 * 2:50 Sqaushed all current 🐜. Server up and running properly.
-* 
-* 
+* 3:15 Add ability to add and display chore name and description.
+* 4:30 Start researching different databases, maybe NoSQL.
+#### Monday, 08/28
+* 6:00 Research MongoDB.
+* 6:15 Decide on MongoDB, delete current MySQL project to create NoSQL project
 
 Copyright (c) [2023] [Brandon Spear]
 
