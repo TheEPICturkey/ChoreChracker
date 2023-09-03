@@ -1,24 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navigation/Navbar';
-import SelectAccount from './path_to_SelectAccount_Component'; // Adjust the import path
-import Login from './path_to_Login_Component'; // Adjust the import path
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
 
 const App = () => {
+    console.log("app is rendering");
     return (
         <Router>
+            <h1>Hello World</h1>
             <Navbar />
-            <Switch>
-                <Route path="/select-account">
-                    <SelectAccount />
-                </Route>
-                <Route path="/login">
-                    <Login />
-                </Route>
-                {/* Add other routes as necessary */}
-            </Switch>
+            <Routes>
+                <Route path="/" element={<div>Home or dashboard component</div>} />
+                <Route path="/sign-in" element={<SignIn />} />
+                <Route path="/sign-up" element={<SignUp />} />
+            </Routes>
         </Router>
     );
 }
 
 export default App;
+
+
