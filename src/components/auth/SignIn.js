@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth } from '../../firebase';
+import { auth, signInWithEmailAndPassword } from '../../firebase/index.js';
 
 export default function SignIn() {
     const [email, setEmail] = useState('');
@@ -9,8 +9,11 @@ export default function SignIn() {
     const handleSignIn = async (e) => {
         e.preventDefault();
         try {
-            await auth.signInWithEmailAndPassword(email, password);
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            console.log("User signed in:", userCredential.user);
+            
         } catch (err) {
+            console.error("Error signing in:", err);
             setError(err.message);
         }
     }

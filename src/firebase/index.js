@@ -1,17 +1,22 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, signOut, createUserWithEmailAndPassword } from "@firebase/auth";
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword, 
+  signOut, 
+  signInWithEmailAndPassword  
+} from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: "chorechracker.appspot.com",
-    messagingSenderId: "851274142863",
-    appId: "1:851274142863:web:f5eaadf93d7e4b378c4cfa",
-    measurementId: "G-265G9Z34GK"
-  };
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: "chorechracker.appspot.com",
+  messagingSenderId: "851274142863",
+  appId: "1:851274142863:web:f5eaadf93d7e4b378c4cfa",
+  measurementId: "G-265G9Z34GK"
+};
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig); 
 const auth = getAuth();
 
 const signOutUser = async () => {
@@ -23,4 +28,6 @@ const signOutUser = async () => {
   }
 };
 
-export { auth, signOutUser, createUserWithEmailAndPassword };
+export { auth, signInWithEmailAndPassword, signOutUser, createUserWithEmailAndPassword };
+
+
