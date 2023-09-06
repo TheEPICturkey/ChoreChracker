@@ -52,7 +52,15 @@ MIT License
 #### Monday, 08/28
 * 6:00 Research MongoDB.
 * 6:15 Decide on MongoDB, delete current MySQL project to create NoSQL project
-
+#### Tuesday, 08/29
+* Add basic structure and plan process.
+#### Wednesday, 08/30
+* Do some research on professional login pages.
+#### Sunday, 09/03
+* Start adding in ability to creat account and login to account.
+* 🐜 after 🐜 after 🐜. Never ending process.
+#### Tuesday, 08/28
+* Squash rest of 🐜, start working on home page. Should finish tomorrow.
 Copyright (c) [2023] [Brandon Spear]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
