@@ -31,7 +31,7 @@ Capstone Project for Epicodus
 ### License
 MIT License
 
-### Research & Planning Log
+### Research, Planning and Activity Log
 #### Friday, 08/25
 * 6:33 Create repository
 * 7:30 Add proposal
