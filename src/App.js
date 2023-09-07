@@ -8,10 +8,10 @@ const App = () => {
     console.log("app is rendering");
     return (
         <Router>
-            <h1>Hello World</h1>
+            <h1>Chore Chracker</h1>
             <Navbar />
             <Routes>
-                <Route path="/" element={<div>Home or dashboard component</div>} />
+                <Route path="/" element={<div></div>} />
                 <Route path="/sign-in" element={<SignIn />} />
                 <Route path="/sign-up" element={<SignUp />} />
             </Routes>
