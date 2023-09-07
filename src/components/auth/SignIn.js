@@ -1,44 +1,49 @@
-import React, { useState } from 'react';
-import { auth, signInWithEmailAndPassword } from '../../firebase';
+import React, { useState, useContext } from 'react';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
-export default function SignIn() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-    const navigate = useNavigate();
+function SignIn() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
-    const handleSignIn = async (e) => {
-        e.preventDefault();
-        try {
-            await signInWithEmailAndPassword(auth, email, password);
-            console.log("Sign in was successful");
-            navigate('/home'); 
-        } catch (err) {
-            setError(err.message);
-        }
+  const auth = getAuth();
+  const navigate = useNavigate();
+
+  const { setUser } = useContext(AuthContext);
+
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      setUser(userCredential.user);  
+      console.log("Sign in was successful");
+      navigate('/home');  
+    } catch (err) {
+      setError(err.message);
     }
+  };
 
-    return (
-        <div>
-            <h2>Sign In</h2>
-            {error && <p>{error}</p>}
-            <form onSubmit={handleSignIn}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
-    );
+  return (
+    <form onSubmit={handleSignIn}>
+      {error && <p>{error}</p>}
+      <input 
+        type="email" 
+        placeholder="Email" 
+        value={email} 
+        onChange={(e) => setEmail(e.target.value)} 
+      />
+      <input 
+        type="password" 
+        placeholder="Password" 
+        value={password} 
+        onChange={(e) => setPassword(e.target.value)} 
+      />
+      <button type="submit">Sign In</button>
+    </form>
+  );
 }
+
+export default SignIn;
 

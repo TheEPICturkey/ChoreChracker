@@ -1,13 +1,25 @@
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
 function Navbar() {
-    return (
-<nav style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <Link to="/" style={{ margin: '0 10px' }}>Home</Link>
-            <Link to="/sign-up" style={{ margin: '0 10px' }}>Sign Up</Link>
-            <Link to="/sign-in" style={{ margin: '0 10px' }}>Sign In</Link>
-        </nav>
-    );
+  const { user } = useContext(AuthContext);
+
+  console.log(user);
+
+  return (
+    <nav>
+      <Link to="/">Home</Link>
+      {!user ? (
+        <>
+          <Link to="/sign-up">Sign Up</Link>
+          <Link to="/sign-in">Sign In</Link>
+        </>
+      ) : (
+        <button onClick={() => { /* Function to handle sign out when i make it */ }}>Sign Out</button>
+      )}
+    </nav>
+  );
 }
 
 export default Navbar;
