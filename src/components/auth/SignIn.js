@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { auth, signInWithEmailAndPassword } from '../../firebase/index.js';
+import { auth, signInWithEmailAndPassword } from '../../firebase';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     const handleSignIn = async (e) => {
         e.preventDefault();
         try {
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            console.log("User signed in:", userCredential.user);
-            
+            await signInWithEmailAndPassword(auth, email, password);
+            console.log("Sign in was successful");
+            navigate('/home'); 
         } catch (err) {
-            console.error("Error signing in:", err);
             setError(err.message);
         }
     }
@@ -40,3 +41,4 @@ export default function SignIn() {
         </div>
     );
 }
+
