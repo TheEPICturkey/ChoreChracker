@@ -1,25 +1,33 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 
 function Navbar() {
-  const { user } = useContext(AuthContext);
+  const { currentUser, setCurrentUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  console.log(user);
+  console.log(currentUser);
+
+  const handleSignOut = () => {
+    setCurrentUser(null);
+    navigate('/sign-in');
+  };
 
   return (
     <nav>
       <Link to="/">Home</Link>
-      {!user ? (
+      {!currentUser ? (
         <>
           <Link to="/sign-up">Sign Up</Link>
           <Link to="/sign-in">Sign In</Link>
         </>
       ) : (
-        <button onClick={() => { /* Function to handle sign out when i make it */ }}>Sign Out</button>
+        <button onClick={handleSignOut}>Sign Out</button>
       )}
     </nav>
   );
 }
 
 export default Navbar;
+
+

@@ -11,13 +11,13 @@ function SignIn() {
   const auth = getAuth();
   const navigate = useNavigate();
 
-  const { setUser } = useContext(AuthContext);
+  const { setCurrentUser } = useContext(AuthContext);
 
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      setUser(userCredential.user);  
+      setCurrentUser(userCredential.user);  
       console.log("Sign in was successful");
       navigate('/home');  
     } catch (err) {
@@ -46,4 +46,5 @@ function SignIn() {
 }
 
 export default SignIn;
+
 
