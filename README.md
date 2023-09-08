@@ -59,8 +59,13 @@ MIT License
 #### Sunday, 09/03
 * Start adding in ability to creat account and login to account.
 * 🐜 after 🐜 after 🐜. Never ending process.
-#### Tuesday, 08/28
+#### Tuesday, 09/05
 * Squash rest of 🐜, start working on home page. Should finish tomorrow.
+* Add home page after logging in.
+#### Thursday, 09/07
+* Squash some 🐜.
+* Add Sign out button
+
 Copyright (c) [2023] [Brandon Spear]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
