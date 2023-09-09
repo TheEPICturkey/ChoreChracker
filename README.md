@@ -57,7 +57,8 @@ MIT License
 #### Wednesday, 08/30
 * Do some research on professional login pages.
 #### Sunday, 09/03
-* Start adding in ability to creat account and login to account.
+* Decide against mongo, go with firebase.
+* Start adding in ability to create account and login to account.
 * 🐜 after 🐜 after 🐜. Never ending process.
 #### Tuesday, 09/05
 * Squash rest of 🐜, start working on home page. Should finish tomorrow.
@@ -65,6 +66,7 @@ MIT License
 #### Thursday, 09/07
 * Squash some 🐜.
 * Add Sign out button
+* Successfully hide home button on login screen and home page.
 
 Copyright (c) [2023] [Brandon Spear]
 
