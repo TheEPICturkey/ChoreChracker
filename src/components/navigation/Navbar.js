@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <nav>
-      <Link to="/">Home</Link>
+      {currentUser && <Link to="/">Home</Link>}
       {!currentUser ? (
         <>
           <Link to="/sign-up">Sign Up</Link>
@@ -29,5 +29,9 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
+
 
 
