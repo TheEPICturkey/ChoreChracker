@@ -67,6 +67,10 @@ MIT License
 * Squash some 🐜.
 * Add Sign out button
 * Successfully hide home button on login screen and home page.
+#### Thursday, 09/07
+* Squash some 🐜.
+* Add Parent profile with ability to go back to home page.
+* Added hashing for passwords.
 
 Copyright (c) [2023] [Brandon Spear]
 
