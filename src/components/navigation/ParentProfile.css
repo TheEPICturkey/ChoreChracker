@@ -1,0 +1,19 @@
+.parent-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2a9d49;
+  }
+  
+  .profile-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  

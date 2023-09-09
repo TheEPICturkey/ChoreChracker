@@ -1,9 +1,11 @@
 import React from 'react';
+import ParentProfile from './ParentProfile';
 
 function Home() {
   return (
-    <div style={{ backgroundColor: 'red', height: '100vh', width: '100vw' }}>
-      <h1>Welcome Home!</h1>
+    <div>
+      <h1>Home</h1>
+      <ParentProfile />
     </div>
   );
 }
