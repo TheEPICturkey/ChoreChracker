@@ -6,7 +6,7 @@ function ParentProfile() {
   const navigate = useNavigate();  
 
   const navigateToParentHome = () => {
-    navigate('/parent-home');  
+    navigate('/ParentHome');  
   };
 
   return (

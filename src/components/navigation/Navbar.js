@@ -16,7 +16,8 @@ function Navbar() {
 
   return (
     <nav>
-      {currentUser && location.pathname !== '/home' && <Link to="/">Home</Link>}
+      {currentUser && location.pathname !== '/home' && location.pathname !== '/ParentHome' && <Link to="/">Home</Link>}
+
       {!currentUser ? (
         <>
           <Link to="/sign-up">Sign Up</Link>
@@ -30,14 +31,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
