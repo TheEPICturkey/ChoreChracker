@@ -14,7 +14,7 @@
 
 // export default ParentHome;
 
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { db } from '../../firebase/index'; 
@@ -24,6 +24,23 @@ function ParentHome() {
   const [kidName, setKidName] = useState('');
   const navigate = useNavigate();
   const { setCurrentUser, kids, setKids } = useContext(AuthContext);
+
+  useEffect(() => {
+    const fetchKids = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "kids"));
+        let kidsArray = [];
+        querySnapshot.forEach((doc) => {
+          kidsArray.push(doc.data());
+        });
+        setKids(kidsArray);
+      } catch (e) {
+        console.error("Error fetching kids: ", e);
+      }
+    };
+
+    fetchKids();
+  }, [setKids]);
 
   const handleSignOut = () => {
     setCurrentUser(null);

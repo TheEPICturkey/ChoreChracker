@@ -5,7 +5,13 @@ import {
   signOut, 
   signInWithEmailAndPassword  
 } from "firebase/auth";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { 
+  getFirestore, 
+  doc, 
+  setDoc, 
+  getDocs, // import getDocs
+  collection // import collection
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -30,6 +36,14 @@ const signOutUser = async () => {
   }
 };
 
-export { auth, signInWithEmailAndPassword, signOutUser, createUserWithEmailAndPassword, db };
+export { 
+  auth, 
+  signInWithEmailAndPassword, 
+  signOutUser, 
+  createUserWithEmailAndPassword, 
+  db,
+  getDocs, 
+  collection 
+};
 
 

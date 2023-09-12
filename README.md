@@ -71,6 +71,13 @@ MIT License
 * Squash some 🐜.
 * Add Parent profile with ability to go back to home page.
 * Added hashing for passwords.
+#### Sunday, 09/10
+* Cleaned up code.
+* Fixed some small teenie 🐜.
+* Researched apps that had profile and profile customization like Hulu, Netflix, ect to better understand how to create my profiles.
+#### Sunday, 09/11
+* Added ability in parent profile to create child profile.
+* Updated firebase and changed security rules for testing purposes. I NEED TO REMEMBER TO GO BACK AND MAKE THEM STRICT WHEN DONE WITH PROJECT.
 
 Copyright (c) [2023] [Brandon Spear]
 
