@@ -78,6 +78,8 @@ MIT License
 #### Sunday, 09/11
 * Added ability in parent profile to create child profile.
 * Updated firebase and changed security rules for testing purposes. I NEED TO REMEMBER TO GO BACK AND MAKE THEM STRICT WHEN DONE WITH PROJECT.
+* Updated firebase to allow display of created child accounts.
+* Created css ruleset to randomize child account profile color upon creation.
 
 Copyright (c) [2023] [Brandon Spear]
 
