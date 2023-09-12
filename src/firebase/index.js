@@ -5,6 +5,7 @@ import {
   signOut, 
   signInWithEmailAndPassword  
 } from "firebase/auth";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -18,6 +19,7 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig); 
 const auth = getAuth();
+const db = getFirestore();
 
 const signOutUser = async () => {
   try {
@@ -28,6 +30,6 @@ const signOutUser = async () => {
   }
 };
 
-export { auth, signInWithEmailAndPassword, signOutUser, createUserWithEmailAndPassword };
+export { auth, signInWithEmailAndPassword, signOutUser, createUserWithEmailAndPassword, db };
 
 

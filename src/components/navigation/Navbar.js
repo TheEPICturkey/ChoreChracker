@@ -50,18 +50,22 @@ function Navbar() {
 
   return (
     <nav>
-      {location.pathname === '/parentHome' ? null : (
-        currentUser ? (
-          <>
-            {location.pathname !== '/home' && <Link to="/">Home</Link>}
-            <button onClick={handleSignOut}>Sign Out</button>
-          </>
-        ) : (
-          <>
-            <Link to="/sign-up">Sign Up</Link>
-            <Link to="/sign-in">Sign In</Link>
-          </>
-        )
+      {currentUser ? (
+        <>
+          {location.pathname !== '/home' && location.pathname !== '/parentHome' && <Link to="/home">Home</Link>}
+          {location.pathname === '/ParentHome' && (
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '150px' }}>
+              <button onClick={() => navigate('/home')}>Home</button>
+              <button onClick={handleSignOut}>Sign Out</button>
+            </div>
+          )}
+          {location.pathname !== '/ParentHome' && <button onClick={handleSignOut}>Sign Out</button>}
+        </>
+      ) : (
+        <>
+          <Link to="/sign-up">Sign Up</Link>
+          <Link to="/sign-in">Sign In</Link>
+        </>
       )}
     </nav>
   );
