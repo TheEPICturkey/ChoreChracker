@@ -75,11 +75,18 @@ MIT License
 * Cleaned up code.
 * Fixed some small teenie 🐜.
 * Researched apps that had profile and profile customization like Hulu, Netflix, ect to better understand how to create my profiles.
-#### Sunday, 09/11
+#### Monday, 09/11
 * Added ability in parent profile to create child profile.
 * Updated firebase and changed security rules for testing purposes. I NEED TO REMEMBER TO GO BACK AND MAKE THEM STRICT WHEN DONE WITH PROJECT.
 * Updated firebase to allow display of created child accounts.
 * Created css ruleset to randomize child account profile color upon creation.
+#### Tuesday, 09/12
+* Code clean up.
+* Fix a few 🐜.
+#### Tuesday, 09/12
+*
+
+
 
 Copyright (c) [2023] [Brandon Spear]
 
