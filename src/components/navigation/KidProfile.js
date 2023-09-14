@@ -52,7 +52,7 @@ function KidProfile() {
           <h3>Chore Name: {chore.name}</h3>
           <p>Due Date: {chore.dueDate}</p>
           <p>Note: {chore.note}</p>
-          <p>Assigned To Kid ID: {chore.assignedToKidId}</p>6
+          {/* <p>Assigned To Kid ID: {chore.assignedToKidId}</p> */}
         </div>
       ))}
     </div>
