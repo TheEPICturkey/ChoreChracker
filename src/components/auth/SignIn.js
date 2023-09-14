@@ -25,8 +25,10 @@ function SignIn() {
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      setCurrentUser(userCredential.user);
-      console.log("Sign in was successful");
+
+      console.log("Sign in was successful, user data: ", userCredential.user); // Logging user data structure
+
+      setCurrentUser(userCredential.user); // Setting currentUser state
       navigate('/home');
 
       if (rememberMe) {
@@ -38,9 +40,11 @@ function SignIn() {
         localStorage.removeItem('rememberMeEmail');
         localStorage.removeItem('rememberMePassword');
       }
-      
+
     } catch (err) {
+      setCurrentUser(null); // Resetting currentUser to null if there is an error
       setError(err.message);
+      console.error("Error in sign-in: ", err.message);
     }
   };
 
@@ -73,4 +77,5 @@ function SignIn() {
 }
 
 export default SignIn;
+
 

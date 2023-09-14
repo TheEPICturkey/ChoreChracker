@@ -3,14 +3,15 @@ import {
   getAuth, 
   createUserWithEmailAndPassword, 
   signOut, 
-  signInWithEmailAndPassword  
+  signInWithEmailAndPassword
 } from "firebase/auth";
 import { 
   getFirestore, 
   doc, 
   setDoc, 
   getDocs, // import getDocs
-  collection // import collection
+  collection, // import collection
+  where  // import where from firestore, not auth
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -43,7 +44,10 @@ export {
   createUserWithEmailAndPassword, 
   db,
   getDocs, 
-  collection 
+  collection,
+  where,
+  doc, 
+  setDoc
 };
 
 
