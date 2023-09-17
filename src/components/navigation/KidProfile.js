@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { db, getDocs, collection, where } from '../../firebase/index'; 
+import { db, getDocs, collection, where, doc as firestoreDoc, updateDoc, query, getDoc } from '../../firebase/index'; 
 
 function KidProfile() {
-  const { id } = useParams(); // Assuming you're using react-router-dom and you have a route set up to pass the kid ID as a URL parameter
+  const { id } = useParams();
   const [kidData, setKidData] = useState(null);
   const [chores, setChores] = useState([]);
   
   useEffect(() => {
     const fetchKidData = async () => {
       try {
-        const docSnapshot = await doc(db, 'kids', id).get();
+        console.log(db, 'kids', id);
+        const docRef = firestoreDoc(db, 'kids', id);
+        const docSnapshot = await getDoc(docRef);
         if (docSnapshot.exists()) {
           setKidData(docSnapshot.data());
         } else {
@@ -27,12 +29,13 @@ function KidProfile() {
   useEffect(() => {
     const fetchChoresForKid = async (kidId) => {
       try {
-        const querySnapshot = await getDocs(collection(db, 'chores'), where('assignedToKidId', '==', kidId));
+        const querySnapshot = await getDocs(query(collection(db, 'chores'), where('assignedToKidId', '==', kidId), where('isCompleted', '==', false)));
         let choresArray = [];
         querySnapshot.forEach((doc) => {
           choresArray.push({ ...doc.data(), id: doc.id });
         });
         setChores(choresArray);
+        console.log('Updated chores:', choresArray);  // Added console log here
       } catch (e) {
         console.error('Error fetching chores:', e);
       }
@@ -43,6 +46,16 @@ function KidProfile() {
     }
   }, [id]);
 
+  const markChoreAsComplete = async (choreId) => {
+    try {
+      const choreDoc = firestoreDoc(db, 'chores', choreId);
+      await updateDoc(choreDoc, { isCompleted: true });
+      setChores(chores.filter(chore => chore.id !== choreId));
+    } catch (e) {
+      console.error('Error updating chore:', e);
+    }
+  };
+
   return (
     <div>
       {kidData && <h1>{kidData.name}'s Profile</h1>}
@@ -52,15 +65,11 @@ function KidProfile() {
           <h3>Chore Name: {chore.name}</h3>
           <p>Due Date: {chore.dueDate}</p>
           <p>Note: {chore.note}</p>
-          {/* <p>Assigned To Kid ID: {chore.assignedToKidId}</p> */}
+          <button onClick={() => markChoreAsComplete(chore.id)}>COMPLETE</button>
         </div>
       ))}
     </div>
   );
-
 }
 
 export default KidProfile;
-
-
-
