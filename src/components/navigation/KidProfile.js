@@ -10,7 +10,6 @@ function KidProfile() {
   useEffect(() => {
     const fetchKidData = async () => {
       try {
-        console.log(db, 'kids', id);
         const docRef = firestoreDoc(db, 'kids', id);
         const docSnapshot = await getDoc(docRef);
         if (docSnapshot.exists()) {
@@ -35,7 +34,7 @@ function KidProfile() {
           choresArray.push({ ...doc.data(), id: doc.id });
         });
         setChores(choresArray);
-        console.log('Updated chores:', choresArray);  // Added console log here
+        console.log('Updated chores:', choresArray);
       } catch (e) {
         console.error('Error fetching chores:', e);
       }
@@ -73,3 +72,4 @@ function KidProfile() {
 }
 
 export default KidProfile;
+

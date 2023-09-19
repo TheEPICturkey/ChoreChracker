@@ -41,6 +41,7 @@ import Home from './components/navigation/Home';
 import KidProfile from './components/navigation/KidProfile';
 import ParentProfile from './components/navigation/ParentProfile'; 
 import ParentHome from './components/navigation/ParentHome';
+import AddChore from './components/navigation/AddChore';
 
 const App = () => {
   return (
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/kid-profile/:id" element={<KidProfile />} />
           <Route path="/home/parent" element={<ParentProfile />} />
           <Route path="/parentHome" element={<ParentHome />} />
+          <Route path="/add-chore" element={<AddChore />} />
         </Routes>
       </Router>
     </AuthProvider>

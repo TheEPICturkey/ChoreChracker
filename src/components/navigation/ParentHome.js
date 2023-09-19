@@ -69,23 +69,23 @@ function ParentHome() {
       alert("Please select a kid to assign the chore to.");
       return;
     }
-
+  
     if (!currentUser) {
       alert("Current user is not defined. Please sign in again.");
       return;
     }
-
-    // Logging currentUser structure to verify the properties
+  
     console.log('Current user structure: ', currentUser);
     console.log('Assigned Kid ID:', assignedKid);
-
+  
     try {
       await addDoc(collection(db, "chores"), {
         name: choreName,
         dueDate,
         note,
         assignedToKidId: assignedKid,  
-        parentId: currentUser.uid,  // Changed from currentUser.id to currentUser.uid
+        parentId: currentUser.uid,  
+        isCompleted: false,  // Added the isCompleted field here
       });
       console.log("Chore created successfully");
       setChoreName('');
@@ -96,6 +96,7 @@ function ParentHome() {
       console.error("Error creating chore: ", e);
     }
   };
+  
 
   return (
     <div>
