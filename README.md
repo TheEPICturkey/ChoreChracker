@@ -84,7 +84,18 @@ MIT License
 * Code clean up.
 * Fix a few 🐜.
 #### Tuesday, 09/12
-*
+* Chasing a 🐜.
+#### Wednesday, 09/13
+* Chasing a 🐜.
+#### Thursday, 09/14
+* Chasing a 🐜.
+#### Saturday, 09/16
+* Chasing a 🐜.
+#### Sunday, 09/17
+* Chasing a 🐜.
+#### Monday, 09/18
+* Chasing a 🐜.
+* I FOUND THE BUG. I HAD TWO WRITTEN FUNCTIONS DOING THE SAME TASK AND THEY WERE OVERRIDING EACH OTHER AND BREAKING. SO MUCH WASTED TIME. *cries in corner* 
 
 
 
