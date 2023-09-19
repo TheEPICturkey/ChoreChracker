@@ -4,11 +4,10 @@ Chore Tracker | Brandon Spear
 ChoreTracker is a web application designed to assit parents in assigning and monitoring chores for their childeren, while also offering incentives. Application will have creation of parent account, parent and child profiles within, and chore creation, assignment, and viewing. This will promote responsibility, and orginization.
 
 MVP
-1. User Authentication.              
-2. Parent and child profiles parents will have 4  digit password.                                                   
-3. For mvp purposes, up to two child profiles.     
-4. Parents can make, edit, and assign chores.
-5. Child(ren) can mark chores as complete. 
+1. Parent will make account.              
+2. within parent account, parent can make a parent profile, and kid profiles.                                                      
+4. Parents can make, edit, and assign choresto specific kid profiles.
+5. Child(ren) can mark chores as complete and will dissapear from their "ToDo" list. 
 
 Technology Used
 ASP.NET, React, MySQL, 
