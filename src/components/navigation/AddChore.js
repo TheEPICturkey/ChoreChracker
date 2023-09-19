@@ -1,3 +1,5 @@
+// MAY NOT NEED BUT UNSURE YET. IN TESTING STATGES.
+
 // import React, { useState } from 'react';
 // import { db, collection, addDoc } from '../../firebase/index';
 

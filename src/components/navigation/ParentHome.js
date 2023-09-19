@@ -85,7 +85,7 @@ function ParentHome() {
         note,
         assignedToKidId: assignedKid,  
         parentId: currentUser.uid,  
-        isCompleted: false,  // Added the isCompleted field here
+        isCompleted: false,  
       });
       console.log("Chore created successfully");
       setChoreName('');
