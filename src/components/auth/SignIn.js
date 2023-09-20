@@ -42,7 +42,7 @@ function SignIn() {
       }
 
     } catch (err) {
-      setCurrentUser(null); // Resetting currentUser to null if there is an error
+      setCurrentUser(null); 
       setError(err.message);
       console.error("Error in sign-in: ", err.message);
     }

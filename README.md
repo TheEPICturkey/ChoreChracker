@@ -96,6 +96,9 @@ MIT License
 #### Monday, 09/18
 * Chasing a 🐜.
 * I FOUND THE BUG. I HAD TWO WRITTEN FUNCTIONS DOING THE SAME TASK AND THEY WERE OVERRIDING EACH OTHER AND BREAKING. SO MUCH WASTED TIME. *cries in corner* 
+#### Tuesday, 09/19
+* Done with MVP, researching "extras" i can add.
+* Settle on Password for parent profile, dark mode, and possibly application language?
 
 
 
