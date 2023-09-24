@@ -99,6 +99,10 @@ MIT License
 #### Tuesday, 09/19
 * Done with MVP, researching "extras" i can add.
 * Settle on Password for parent profile, dark mode, and possibly application language?
+#### Wednesday, 09/20
+* Running into a lot of issues with password for parent profile.
+#### Sunday, 09/24
+* Set profile password aside, working on styling.
 
 
 
