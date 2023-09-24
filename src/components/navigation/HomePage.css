@@ -1,0 +1,10 @@
+body {
+    background-image: url('./../../../pexels-scott-webb-1029624.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 90vh; 
+    margin: 0; 
+    padding: 0; 
+  }

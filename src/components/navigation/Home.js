@@ -1,8 +1,10 @@
+import './HomePage.css';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import ParentProfile from './ParentProfile';
 import { useNavigate } from 'react-router-dom';
 import './KidProfile.css';
+
 
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
