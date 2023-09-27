@@ -18,7 +18,7 @@ const App = () => {
   return (
     <AuthProvider>
       <Router>
-        <h1>Chore Chracker</h1>
+        {/* <h2>Chore Chracker</h2> */}
         <Navbar />
         <Routes>
           <Route path="/sign-in" element={<SignIn />} />

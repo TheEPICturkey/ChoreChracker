@@ -48,7 +48,37 @@ function SignIn() {
     }
   };
 
-  return (
+//   return (
+//     <form onSubmit={handleSignIn}>
+//       {error && <p>{error}</p>}
+//       <input 
+//         type="email" 
+//         placeholder="Email" 
+//         value={email} 
+//         onChange={(e) => setEmail(e.target.value)} 
+//       />
+//       <input 
+//         type="password" 
+//         placeholder="Password" 
+//         value={password} 
+//         onChange={(e) => setPassword(e.target.value)} 
+//       />
+//       <label>
+//         <input 
+//           type="checkbox"
+//           checked={rememberMe}
+//           onChange={() => setRememberMe(prev => !prev)}
+//         />
+//         Remember Me
+//       </label>
+//       <button type="submit">Sign In</button>
+//     </form>
+//   );
+// }
+
+return (
+  <div>
+    <h1>ChoreIO</h1>
     <form onSubmit={handleSignIn}>
       {error && <p>{error}</p>}
       <input 
@@ -73,8 +103,10 @@ function SignIn() {
       </label>
       <button type="submit">Sign In</button>
     </form>
-  );
+  </div>
+);
 }
+
 
 export default SignIn;
 
