@@ -4,3 +4,10 @@ h1 {
     padding: 10px;
     text-align: center;
   }
+  
+  h2 {
+    color: rgb(251, 12, 12);
+    font-size: 70px;
+    padding: 10px;
+    text-align: center;
+  }

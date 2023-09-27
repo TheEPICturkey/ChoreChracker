@@ -29,6 +29,7 @@ const App = () => {
           <Route path="/home/parent" element={<ParentProfile />} />
           <Route path="/parentHome" element={<ParentHome />} />
           <Route path="/add-chore" element={<AddChore />} />
+          <Route path="/SignUp" element={<SignUp />} />
         </Routes>
       </Router>
     </AuthProvider>

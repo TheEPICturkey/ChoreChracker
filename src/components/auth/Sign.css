@@ -1,0 +1,28 @@
+h1 {
+    color: rgb(251, 12, 12);
+    font-size: 150px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .test {
+    color: rgb(255, 0, 0);
+    padding: 10px;
+    text-align: center;
+  }
+
+  .Background {
+    background-color: #3498db62; 
+    /* padding: 20px;  */
+    text-align: center;
+    color: #fff; 
+    width: 700px;
+    /* height: ; */
+    margin: 0 auto;
+  }
+
+  .SignUp {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 0, 0);
+  }
