@@ -189,7 +189,7 @@ function SignIn() {
           </label>
           <br></br>
           <br></br>
-          <button type="submit">Sign In</button><button onClick={() => navigate('../SignUp')}>Sign Up</button>
+          <button type="submit">Sign In</button>
         </form>
         <br></br>
         Don't have an account? Sign Up<button className="SignUp" onClick={() => navigate('../SignUp')}><strong><em>HERE</em></strong>!</button>

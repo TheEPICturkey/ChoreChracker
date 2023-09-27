@@ -30,6 +30,7 @@ const App = () => {
           <Route path="/parentHome" element={<ParentHome />} />
           <Route path="/add-chore" element={<AddChore />} />
           <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/SignIn" element={<SignIn />} />
         </Routes>
       </Router>
     </AuthProvider>
