@@ -6,11 +6,11 @@ import './Sign.css';
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false); // Add showPassword state
-  const [rememberMe, setRememberMe] = useState(false); // Add rememberMe state
+  const [showPassword, setShowPassword] = useState(false); 
+  const [rememberMe, setRememberMe] = useState(false); 
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate(); // Import useNavigate
+  const navigate = useNavigate();
 
   const handleSignUp = async () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -34,7 +34,7 @@ const SignUp = () => {
       <h1>ChoreIO</h1>
       <h2>Sign Up</h2>
       <div className='test'>
-        <p>EMAIL</p>
+        <p>VALID EMAIL</p>
         <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <p>PASSWORD</p>
         <input type={showPassword ? "text" : "password"} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
@@ -61,8 +61,7 @@ const SignUp = () => {
         <br></br>
         <br></br>
         <button onClick={handleSignUp}>Sign Up</button>
-        <p>Don't have an account? Sign Up<button className="SignIn" onClick={() => navigate('../SignIn')}><strong><em>HERE</em></strong>!</button></p>
-      
+        <p>Already have an account? Sign In<button className="SignIn" onClick={() => navigate('../SignIn')}><strong><em>HERE</em></strong>!</button></p>
         {error && <p>Error: {error}</p>}
       </div>
     </div>

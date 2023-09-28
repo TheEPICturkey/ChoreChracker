@@ -6,7 +6,7 @@ ChoreTracker is a web application designed to assit parents in assigning and mon
 MVP
 1. Parent will make account.              
 2. within parent account, parent can make a parent profile, and kid profiles.                                                      
-4. Parents can make, edit, and assign choresto specific kid profiles.
+4. Parents can make, edit, and assign chores to specific kid profiles.
 5. Child(ren) can mark chores as complete and will dissapear from their "ToDo" list. 
 
 Technology Used
@@ -23,4 +23,4 @@ Stretch Goals
 
 
 
-state, nosql, google firebase
+Tailwind (CSS)

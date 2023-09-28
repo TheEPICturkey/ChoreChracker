@@ -13,11 +13,9 @@ h1 {
 
   .Background {
     background-color: #3498db62; 
-    /* padding: 20px;  */
     text-align: center;
     color: #fff; 
     width: 700px;
-    /* height: ; */
     margin: 0 auto;
   }
 
@@ -32,3 +30,10 @@ h1 {
     border-color: rgba(0, 0, 0, 0);
     color: rgb(255, 0, 0);
   }
+
+  body, html {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
