@@ -9,11 +9,15 @@ import './KidProfile.css';
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
+  let randomValue;
+
   for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+    randomValue = Math.floor(Math.random() * 8);
+    color += letters[randomValue];
   }
   return color;
 }
+
 
 function Home() {
   const navigate = useNavigate();

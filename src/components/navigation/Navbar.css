@@ -1,0 +1,41 @@
+/* Navbar.css */
+.signout-circle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 15px;
+    color: white;
+    background-color: #2a9d49; /* Set the background color as needed */
+    animation: signoutBounce 2s ease-in-out;
+    border: none; /* Remove the button border */
+    outline: none; /* Remove the button outline on focus */
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+    padding: 0; /* Remove padding to make the button size tight */
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  @keyframes signoutBounce {
+    0%, 250% {
+      transform: translateY(-100%);
+    }
+    150% {
+      transform: translateY(0%);
+    }
+  }
+  
+.signout-circle button {
+  background: none; 
+  border: none; 
+  color: inherit; 
+  font-size: inherit; 
+  cursor: inherit; 
+  padding: 0; 
+  outline: none; 
+  
+}
+  
+
