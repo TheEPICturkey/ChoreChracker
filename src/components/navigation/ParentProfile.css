@@ -16,4 +16,36 @@
     justify-content: center;
     cursor: pointer;
   }
+
+  h2 {
+    font-size: 24px;     
+    color: #333;        
+    margin-top: 20px;    
+    margin-bottom: 10px; 
+  }
   
+
+  .custom-textarea {
+    width: 62%; 
+    height: 150px; 
+  }
+
+ .kidChoreCreate {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 50vh; 
+}
+
+.addAKid {
+  text-align: center; 
+  margin: 0; 
+}
+
+.createKidButtonContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  margin-top: 0px; 
+}

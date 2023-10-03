@@ -1,5 +1,5 @@
 /* KidProfile.css */
-.profile-circle {
+/* .profile-circle {
     width: 100px;
     height: 100px;
     display: flex;
@@ -11,4 +11,36 @@
     text-align: center;
     margin: 5px;
   }
-  
+ 
+  .kidButton {
+    text-align: center;
+    margin-top: 20px; 
+  } */
+
+  /* KidProfile.css */
+.profile-circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+/* Add a new class to center the parent profile */
+.center-parent-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Adjust the margin-top for the kids */
+.kidButton {
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin-top as needed */
+}

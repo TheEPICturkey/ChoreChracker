@@ -21,20 +21,26 @@ function Home() {
 
   return (
     <div>
-      <h2>Home</h2>
-      <ParentProfile />
-      {kids.map(kid => (
-        <div 
-          key={kid.id} 
-          onClick={() => navigate(`/kid-profile/${kid.id}`)} 
-          className="profile-circle"
-          style={{ backgroundColor: getRandomColor() }}
-        >
-          {kid.name}
-        </div>
-      ))}
+      <h2></h2>
+      <div className="center-parent-profile">
+        <ParentProfile />
+      </div>
+      <div className="profile-circle-container">
+        {kids.map(kid => (
+          <div 
+            key={kid.id} 
+            onClick={() => navigate(`/kid-profile/${kid.id}`)} 
+            className="profile-circle"
+            style={{ backgroundColor: getRandomColor() }}
+          >
+            {kid.name}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
 export default Home;
+
+

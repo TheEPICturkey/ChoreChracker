@@ -24,3 +24,5 @@ Stretch Goals
 
 
 Tailwind (CSS) REACT CSS libraries
+
+using matter-js for profile falling physics npm install matter-js

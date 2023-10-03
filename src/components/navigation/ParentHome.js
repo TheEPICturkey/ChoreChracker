@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { db } from '../../firebase/index'; 
 import { setDoc, doc, collection, addDoc, getDocs } from "firebase/firestore"; 
+import './ParentProfile.css';
 
 function ParentHome() {
   const [kidName, setKidName] = useState('');
@@ -84,45 +85,57 @@ function ParentHome() {
 
   return (
     <div>
-      <h1>Welcome to the Parent Home page!</h1>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-        <input 
-          type="text" 
-          placeholder="Kid Name" 
-          value={kidName} 
-          onChange={(e) => setKidName(e.target.value)} 
-        />
-        <button onClick={createKidProfile}>Create Kid Profile</button>
-
-        <form onSubmit={handleChoreCreation}>
+      <h1>Parent Home Page</h1>
+      <div className='kidChoreCreate'>
+        {/* <h1>Parent Home Page</h1> */}
+        <div>
+        <div className='addAKid'>
+          <h2 className='addAKid'>Add a kid</h2>
           <input 
             type="text" 
-            value={choreName} 
-            onChange={(e) => setChoreName(e.target.value)} 
-            placeholder="Chore Name" 
+            placeholder="Kid Name" 
+            value={kidName} 
+            onChange={(e) => setKidName(e.target.value)} 
           />
-          <input 
-            type="date" 
-            value={dueDate} 
-            onChange={(e) => setDueDate(e.target.value)} 
-            placeholder="Due Date" 
-          />
-          <textarea 
-            value={note} 
-            onChange={(e) => setNote(e.target.value)} 
-            placeholder="Note"
-          ></textarea>
-          <select 
-            value={assignedKid} 
-            onChange={(e) => setAssignedKid(e.target.value)}
-          >
-            {kids.map(kid => <option value={kid.id} key={kid.id}>{kid.name}</option>)}
-          </select>
-          <button type="submit">Create Chore</button>
-        </form>
-
-        <button onClick={() => navigate('/home')}>Home</button>
-        <button onClick={handleSignOut}>Sign Out</button>
+          </div>
+          <div className="createKidButtonContainer">
+            <button onClick={createKidProfile} className='createKidButton'>Create Kid Profile</button>
+          </div>  
+          <h2>Create a chore</h2>
+          <form onSubmit={handleChoreCreation} className='addAKid'>
+            <input 
+              type="text" 
+              value={choreName} 
+              onChange={(e) => setChoreName(e.target.value)} 
+              placeholder="Chore Name" 
+            />
+            <input 
+              type="date" 
+              value={dueDate} 
+              onChange={(e) => setDueDate(e.target.value)} 
+              placeholder="Due Date" 
+            />
+            <textarea 
+              value={note} 
+              onChange={(e) => setNote(e.target.value)} 
+              placeholder="Note"
+              className="custom-textarea"
+            ></textarea>
+            <br></br>
+            <select 
+              value={assignedKid} 
+              onChange={(e) => setAssignedKid(e.target.value)}
+            >
+              {kids.map(kid => <option value={kid.id} key={kid.id}>{kid.name}</option>)}
+            </select>
+            <br></br>
+            <button type="submit">Create Chore</button>
+          </form>
+          <div className='addAKid'>
+            <button onClick={() => navigate('/home')}>Home</button> 
+          </div>
+          {/* <button onClick={handleSignOut}>Sign Out</button> */}
+        </div>
       </div>
     </div>
   );

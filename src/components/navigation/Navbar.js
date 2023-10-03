@@ -14,14 +14,20 @@ function Navbar() {
     navigate('/sign-in');
   };
 
-  return (
+  // Check if the current route is "/sign-up" or "/sign-in"
+  const isAuthPage = location.pathname === '/sign-up' || location.pathname === '/sign-in';
+
+  // Render the Navbar only if it's not an authentication page
+  return !isAuthPage ? (
     <nav>
       {currentUser ? (
         <>
-          {location.pathname !== '/home' && location.pathname !== '/parentHome' && <Link to="/home">Home</Link>}
+          {/* {location.pathname !== '/home' && location.pathname !== '/parentHome' && (
+            <Link to="/home">Home</Link>
+          )} */}
           {location.pathname === '/ParentHome' && (
             <div style={{ display: 'flex', justifyContent: 'space-between', width: '150px' }}>
-              <button onClick={() => navigate('/home')}>Home</button>
+              {/* <button onClick={() => navigate('/home')}>Home</button> */}
               <button onClick={handleSignOut}>Sign Out</button>
             </div>
           )}
@@ -34,9 +40,12 @@ function Navbar() {
         </>
       )}
     </nav>
-  );
+  ) : null; // Render null on authentication pages
 }
 
 export default Navbar;
+
+
+
 
 

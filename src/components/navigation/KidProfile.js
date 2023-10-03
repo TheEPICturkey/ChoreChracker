@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { db, getDocs, collection, where, doc as firestoreDoc, updateDoc, query, getDoc } from '../../firebase/index'; 
+import { useNavigate } from 'react-router-dom';
+import './KidProfile.css';
+
 
 function KidProfile() {
   const { id } = useParams();
   const [kidData, setKidData] = useState(null);
   const [chores, setChores] = useState([]);
-  
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchKidData = async () => {
       try {
@@ -67,6 +71,9 @@ function KidProfile() {
           <button onClick={() => markChoreAsComplete(chore.id)}>COMPLETE</button>
         </div>
       ))}
+      <div className='kidButton'>
+        <button onClick={() => navigate('/home')}>Home</button>
+      </div>
     </div>
   );
 }
