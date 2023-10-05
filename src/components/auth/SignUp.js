@@ -15,7 +15,7 @@ const SignUp = () => {
   const handleSignUp = async () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-        setError('Invalid email format');
+        setError('Invalid email or passward format');
         return;
     }
     
@@ -34,6 +34,7 @@ const SignUp = () => {
       <h1>ChoreIO</h1>
       <h2>Sign Up</h2>
       <div className='test'>
+        {error && <p>Error: {error}</p>}
         <p>VALID EMAIL</p>
         <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <p>PASSWORD</p>
@@ -62,7 +63,6 @@ const SignUp = () => {
         <br></br>
         <button onClick={handleSignUp}>Sign Up</button>
         <p>Already have an account? Sign In<button className="SignIn" onClick={() => navigate('../SignIn')}><strong><em>HERE</em></strong>!</button></p>
-        {error && <p>Error: {error}</p>}
       </div>
     </div>
   );

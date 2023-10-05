@@ -9,7 +9,7 @@ function SignIn() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [rememberMe, setRememberMe] = useState(false);
-  const [showPassword, setShowPassword] = useState(false); // Added state for password visibility
+  const [showPassword, setShowPassword] = useState(false); 
 
   const auth = getAuth();
   const navigate = useNavigate();
@@ -28,9 +28,9 @@ function SignIn() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
-      console.log("Sign in was successful, user data: ", userCredential.user); // Logging user data structure
+      console.log("Sign in was successful, user data: ", userCredential.user);
 
-      setCurrentUser(userCredential.user); // Setting currentUser state
+      setCurrentUser(userCredential.user); 
       navigate('/home');
 
       if (rememberMe) {
@@ -44,7 +44,7 @@ function SignIn() {
       }
     } catch (err) {
       setCurrentUser(null);
-      setError(err.message);
+      setError("Your email or password is incorrect. Please double-check and try again.");
       console.error("Error in sign-in: ", err.message);
     }
   };

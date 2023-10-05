@@ -1,4 +1,4 @@
-# ChoreChracker
+# ChoreIO
 
 ### By Brandon Spear
 
@@ -9,9 +9,10 @@ Capstone Project for Epicodus
   * React
   * MySQL
   * axios
+  * matter-js
 
 ### Description
-* ChoreTracker is a web application designed to assist parents in assigning and monitoring chores for their childeren, while also offering incentives. Application will have creation of parent account, parent and child profiles within, and chore creation, assignment, and viewing. This will promote responsibility, and orginization.
+* ChoreIO (formally known as ChoreTracker) is a web application designed to assist parents in assigning and monitoring chores for their childeren, while also offering incentives. Application will have creation of parent account, parent and child profiles within, and chore creation, assignment, and viewing. This will promote responsibility, cleanliness, and orginization.
 
 ### Application Instructions
 * NOTE: You will need a code editor to view or edit the code. My favorite, and recommended one is Visual Studio Code.
@@ -20,13 +21,23 @@ Capstone Project for Epicodus
 * _Once downloaded, open the download to complete the setup_
 
 #### Initial Setup 
-1. 
+1. Go to the repository using this link.
+Click "Clone or download" to reveal the HTTPS url ending with .git and the 'Download ZIP' option.
+Open up your system Terminal or GitBash, navigate to your desktop with the command: cd Desktop, or whichever location suits you best.
+Clone the repository to your desktop using: git clone https://github.com/TheEPICturkey/ChoreChracker.git.
+Enter the command cd ChoreChracker to reach the project directory.
+Enter code . to open it up in Visual Studio Code.
+Alternatively you can just download it by clicking on "Download Zip" option from before.
 
 #### Running the Program
-1.
+1. Navigate to the 'ChoreChracker' directory on your computer while in your terminal.
+2. Run the command "npm install" to install dependencies.
+3. Run the command "npm install matter-js" to install visual effects
+3. Optionally, run the command "npm run build" to bundle the files.
+4. Finally, run the command "npm run start" to start a development server.
 
 ### Known Bugs
-  * No known bugs yet.
+  * When page is refreshed, signout button dissapears and Signin/signup buttons appear.
   
 ### License
 MIT License
@@ -103,7 +114,22 @@ MIT License
 * Running into a lot of issues with password for parent profile.
 #### Sunday, 09/24
 * Set profile password aside, working on styling.
-
+#### Monday, 09/25
+* Working on styling.
+#### Tuesday, 09/26
+* Working on styling.
+#### Wednesday, 09/27
+* Working on styling.
+#### Sunday, 10/01
+* Working on styling.
+#### Monday, 10/02
+* Chasing a 🐜.
+* Working on styling.
+#### Tuesday, 10/03
+* Working on styling.
+#### Wednesday, 10/04
+* Working on styling.
+* Chasing a 🐜.
 
 
 Copyright (c) [2023] [Brandon Spear]

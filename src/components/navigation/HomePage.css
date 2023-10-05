@@ -59,15 +59,15 @@
   }
   
   .profile-circle-container {
-    display: flex; /* Use flexbox to arrange circles in a row */
-    justify-content: center; /* Center the circles horizontally */
-    align-items: center; /* Center the circles vertically */
-    height: 50vh; /* Adjust the height as needed */
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 50vh; 
     text-align: center;
   }
   
   .profile-circle {
-    /* Existing styles */
+    
     width: 100px;
     height: 100px; 
     border-radius: 50%;
@@ -77,8 +77,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Add this to keep them in place */
-    /* Remove the top, left, and transform properties */
+    position: relative;
+  
   }
   
   .parent-profile {
@@ -86,16 +86,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh; /* Adjust the height as needed */
-    margin: 0 auto; /* Add this line to center the element */
+    height: 100vh;
+    margin: 0 auto; 
   }
   
   @keyframes fallAndBounce {
     0%, 100% {
-      transform: translateY(0%); /* Start and end position (no change) */
+      transform: translateY(0%); 
     }
     50% {
-      transform: translateY(-20px); /* Bounce in the middle */
+      transform: translateY(-20px); 
     }
   }
   

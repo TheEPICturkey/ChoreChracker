@@ -8,12 +8,12 @@
     border-radius: 50%;
     font-size: 15px;
     color: white;
-    background-color: #2a9d49; /* Set the background color as needed */
+    background-color: rgb(255, 0, 0); 
     animation: signoutBounce 2s ease-in-out;
-    border: none; /* Remove the button border */
-    outline: none; /* Remove the button outline on focus */
-    cursor: pointer; /* Add pointer cursor to indicate interactivity */
-    padding: 0; /* Remove padding to make the button size tight */
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+    padding: 0; 
     margin-left: 10px;
     margin-top: 10px;
   }
