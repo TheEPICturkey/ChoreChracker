@@ -1,4 +1,4 @@
-Chore Tracker | Brandon Spear
+Chore.IO (Previously Chore Chracker) | Brandon Spear
 
 
 ChoreTracker is a web application designed to assit parents in assigning and monitoring chores for their childeren, while also offering incentives. Application will have creation of parent account, parent and child profiles within, and chore creation, assignment, and viewing. This will promote responsibility, and orginization.
@@ -6,7 +6,7 @@ ChoreTracker is a web application designed to assit parents in assigning and mon
 MVP
 1. Parent will make account.              
 2. within parent account, parent can make a parent profile, and kid profiles.                                                      
-4. Parents can make, edit, and assign chores to specific kid profiles.
+4. Parents can make amd assign chores to specific kid profiles.
 5. Child(ren) can mark chores as complete and will dissapear from their "ToDo" list. 
 
 Technology Used
@@ -20,6 +20,7 @@ Stretch Goals
 5. Detailed history of completed/late chores, and their details.
 5. Reward money for completed chores.
 6. See pools of reward money.
+7. Parents can edit already assigned chores
 
 
 

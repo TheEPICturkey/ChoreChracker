@@ -10,6 +10,7 @@ Capstone Project for Epicodus
   * MySQL
   * axios
   * matter-js
+  * Firestore
 
 ### Description
 * ChoreIO (formally known as ChoreTracker) is a web application designed to assist parents in assigning and monitoring chores for their childeren, while also offering incentives. Application will have creation of parent account, parent and child profiles within, and chore creation, assignment, and viewing. This will promote responsibility, cleanliness, and orginization.
@@ -148,3 +149,5 @@ SOFTWARE.
 #### Wednesday, 10/04
 * Working on styling.
 * Chasing a 🐜.
+#### Sunday, 10/08
+* PRESENTATION DAY!

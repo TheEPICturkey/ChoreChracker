@@ -65,7 +65,7 @@ function SignIn() {
           />
           <p>PASSWORD</p>
           <input
-            type={showPassword ? "text" : "password"} // Toggle password visibility
+            type={showPassword ? "text" : "password"} 
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
